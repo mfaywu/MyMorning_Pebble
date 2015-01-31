@@ -1,0 +1,40 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "wu.mfay@gmail.com",
+    "longName": "MyMorning",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/Breakfast.png",
+                "name": "breakfast_image",
+                "type": "png"
+            },
+            {
+                "file": "images/Toothbrush.png",
+                "name": "brush_teeth_image",
+                "type": "png"
+            },
+            {
+                "file": "images/play_button_png.png",
+                "name": "play_icon",
+                "type": "png"
+            },
+            {
+                "file": "images/Sunrise.png",
+                "name": "SUNRISE_IMAGE",
+                "type": "png"
+            }
+        ]
+    },
+    "shortName": "MyMorning",
+    "uuid": "4a83534c-6889-4155-b7eb-b57edbb116d0",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
