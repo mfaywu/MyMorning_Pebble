@@ -9,13 +9,13 @@
     "resources": {
         "media": [
             {
-                "file": "images/Sunrise.png",
-                "name": "SUNRISE_IMAGE",
+                "file": "images/play_button_png.png",
+                "name": "play_icon",
                 "type": "png"
             },
             {
-                "file": "images/play_button_png.png",
-                "name": "play_icon",
+                "file": "images/Sunrise.png",
+                "name": "SUNRISE_IMAGE",
                 "type": "png"
             }
         ]

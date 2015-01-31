@@ -7,7 +7,7 @@ static BitmapLayer *task_img;
 static BitmapLayer *forward;
 static BitmapLayer *backward;
 static TextLayer *task_name;
-int counter; 
+int counter = 1; 
 int maxRoutines;
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
@@ -92,7 +92,7 @@ void show_task(void) {
   window_stack_push(s_window, true);
   
   //Initializing routine variables 
-  counter = 1; 
+  //counter = 1; 
   maxRoutines = 4;
 }
 

@@ -11,6 +11,14 @@ static BitmapLayer *sunrise;
 static BitmapLayer *start_button;
 static TextLayer *start_text;
 
+static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
+  show_task();   
+}
+
+static void config_provider(Window *window) {
+  window_single_click_subscribe(BUTTON_ID_SELECT, select_click_handler);
+}
+
 static void initialise_ui(void) {
   s_window = window_create();
   window_set_background_color(s_window, GColorBlack);
@@ -55,7 +63,7 @@ static void handle_window_unload(Window* window) {
 
 void show_homescreen(void) {
   initialise_ui();
-  window_set_click_config_provider(s_window, (ClickConfigProvider) click_config_provider);
+  window_set_click_config_provider(s_window, (ClickConfigProvider) config_provider);
   window_set_window_handlers(s_window, (WindowHandlers) {
     .unload = handle_window_unload,
   });
