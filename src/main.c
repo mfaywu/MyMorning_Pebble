@@ -1,22 +1,11 @@
 #include <pebble.h>
+#include "homescreen.h"
+#include "task.h"
 
-Window *my_window;
-TextLayer *text_layer;
-
-void handle_init(void) {
-  my_window = window_create();
-
-  text_layer = text_layer_create(GRect(0, 0, 144, 20));
-  window_stack_push(my_window, true);
-}
-
-void handle_deinit(void) {
-  text_layer_destroy(text_layer);
-  window_destroy(my_window);
-}
+Window *window;
 
 int main(void) {
-  handle_init();
+  show_homescreen();
   app_event_loop();
-  handle_deinit();
+  hide_homescreen();
 }
