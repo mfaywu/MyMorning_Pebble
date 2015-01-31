@@ -1,6 +1,5 @@
 #include <pebble.h>
 #include "homescreen.h"
-#include "task.h"
 
 Window *window;
 

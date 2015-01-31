@@ -1,4 +1,5 @@
 #include "homescreen.h"
+#include "task.h"
 #include <pebble.h>
 
 // BEGIN AUTO-GENERATED UI CODE; DO NOT MODIFY
@@ -9,15 +10,24 @@ static BitmapLayer *sunrise;
 static BitmapLayer *start_button;
 static TextLayer *start_text;
 
+void select_click_handler(ClickRecognizerRef recognizer, void *context) {
+  show_task();
+}
+
+void click_config_provider(Window *s_window) {
+  window_single_click_subscribe(BUTTON_ID_SELECT, select_click_handler);
+}
+
 static void initialise_ui(void) {
   s_window = window_create();
+  window_set_background_color(s_window, GColorBlack);
   window_set_fullscreen(s_window, false);
   
   s_res_play_icon = gbitmap_create_with_resource(RESOURCE_ID_play_icon);
   s_res_gothic_28_bold = fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD);
   // sunrise
-  sunrise = bitmap_layer_create(GRect(0, 87, 145, 65));
-  bitmap_layer_set_background_color(sunrise, GColorBlack);
+  sunrise = bitmap_layer_create(GRect(0, 85, 145, 67));
+  bitmap_layer_set_background_color(sunrise, GColorWhite);
   layer_add_child(window_get_root_layer(s_window), (Layer *)sunrise);
   
   // start_button
@@ -26,7 +36,9 @@ static void initialise_ui(void) {
   layer_add_child(window_get_root_layer(s_window), (Layer *)start_button);
   
   // start_text
-  start_text = text_layer_create(GRect(17, 20, 83, 59));
+  start_text = text_layer_create(GRect(21, 3, 83, 59));
+  text_layer_set_background_color(start_text, GColorBlack);
+  text_layer_set_text_color(start_text, GColorWhite);
   text_layer_set_text(start_text, "Start my morning!");
   text_layer_set_font(start_text, s_res_gothic_28_bold);
   layer_add_child(window_get_root_layer(s_window), (Layer *)start_text);
