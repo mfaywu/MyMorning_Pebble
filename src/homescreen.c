@@ -63,6 +63,8 @@ void show_homescreen(void) {
     .unload = handle_window_unload,
   });
   window_stack_push(s_window, true);
+  printf("helllooooo");
+
 }
 
 void hide_homescreen(void) {
