@@ -7,7 +7,13 @@
     "longName": "MyMorning",
     "projectType": "native",
     "resources": {
-        "media": []
+        "media": [
+            {
+                "file": "images/play_button_png.png",
+                "name": "play_icon",
+                "type": "png"
+            }
+        ]
     },
     "shortName": "MyMorning",
     "uuid": "4a83534c-6889-4155-b7eb-b57edbb116d0",
