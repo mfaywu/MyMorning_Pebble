@@ -9,6 +9,16 @@
     "resources": {
         "media": [
             {
+                "file": "images/Breakfast.png",
+                "name": "breakfast_image",
+                "type": "png"
+            },
+            {
+                "file": "images/Toothbrush.png",
+                "name": "brush_teeth_image",
+                "type": "png"
+            },
+            {
                 "file": "images/play_button_png.png",
                 "name": "play_icon",
                 "type": "png"

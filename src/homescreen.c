@@ -4,9 +4,9 @@
 
 // BEGIN AUTO-GENERATED UI CODE; DO NOT MODIFY
 static Window *s_window;
+static GBitmap *s_res_sunrise_image;
 static GBitmap *s_res_play_icon;
 static GFont s_res_gothic_28_bold;
-static GBitmap *s_res_sunrise_image;
 static BitmapLayer *sunrise;
 static BitmapLayer *start_button;
 static TextLayer *start_text;
@@ -24,9 +24,9 @@ static void initialise_ui(void) {
   window_set_background_color(s_window, GColorBlack);
   window_set_fullscreen(s_window, false);
   
+  s_res_sunrise_image = gbitmap_create_with_resource(RESOURCE_ID_SUNRISE_IMAGE);
   s_res_play_icon = gbitmap_create_with_resource(RESOURCE_ID_play_icon);
   s_res_gothic_28_bold = fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD);
-  s_res_sunrise_image = gbitmap_create_with_resource(RESOURCE_ID_SUNRISE_IMAGE);
   // sunrise
   sunrise = bitmap_layer_create(GRect(0, 85, 145, 67));
   bitmap_layer_set_bitmap(sunrise, s_res_sunrise_image);
@@ -52,8 +52,8 @@ static void destroy_ui(void) {
   bitmap_layer_destroy(sunrise);
   bitmap_layer_destroy(start_button);
   text_layer_destroy(start_text);
-  gbitmap_destroy(s_res_play_icon);
   gbitmap_destroy(s_res_sunrise_image);
+  gbitmap_destroy(s_res_play_icon);
 }
 // END AUTO-GENERATED UI CODE
 
