@@ -22,7 +22,7 @@ static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
     counter++;
   }
   else if (counter == 3) {
-    text_layer_set_text(task_name, "second screen");
+    text_layer_set_text(task_name, "third screen");
     counter++;
   }
   else if (counter == maxRoutines) 
@@ -85,6 +85,7 @@ static void handle_window_unload(Window* window) {
 
 void show_task(void) {
   initialise_ui();
+  window_set_click_config_provider(s_window, (ClickConfigProvider) config_provider);
   window_set_window_handlers(s_window, (WindowHandlers) {
     .unload = handle_window_unload,
   });
@@ -92,7 +93,7 @@ void show_task(void) {
   
   //Initializing routine variables 
   counter = 1; 
-  maxRoutines = 3;
+  maxRoutines = 4;
 }
 
 void hide_task(void) {

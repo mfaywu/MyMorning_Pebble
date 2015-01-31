@@ -11,6 +11,7 @@ static BitmapLayer *start_button;
 static TextLayer *start_text;
 
 void select_click_handler(ClickRecognizerRef recognizer, void *context) {
+  printf("Pushed button");
   show_task();
 }
 
@@ -59,6 +60,7 @@ static void handle_window_unload(Window* window) {
 
 void show_homescreen(void) {
   initialise_ui();
+  window_set_click_config_provider(s_window, (ClickConfigProvider) click_config_provider);
   window_set_window_handlers(s_window, (WindowHandlers) {
     .unload = handle_window_unload,
   });
