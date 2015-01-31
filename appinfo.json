@@ -9,13 +9,38 @@
     "resources": {
         "media": [
             {
-                "file": "images/Breakfast.png",
-                "name": "breakfast_image",
+                "file": "images/waterbottle.png",
+                "name": "waterbottle_image",
                 "type": "png"
             },
             {
-                "file": "images/Toothbrush.png",
-                "name": "brush_teeth_image",
+                "file": "images/getting dressed.png",
+                "name": "dressed_image",
+                "type": "png"
+            },
+            {
+                "file": "images/lotusflower.png",
+                "name": "lotusflower_image",
+                "type": "png"
+            },
+            {
+                "file": "images/Backpack.png",
+                "name": "backpack_image",
+                "type": "png"
+            },
+            {
+                "file": "images/lightbulb.png",
+                "name": "lightbulb_image",
+                "type": "png"
+            },
+            {
+                "file": "images/keys.png",
+                "name": "keys_image",
+                "type": "png"
+            },
+            {
+                "file": "images/Sunrise.png",
+                "name": "SUNRISE_IMAGE",
                 "type": "png"
             },
             {
@@ -24,8 +49,13 @@
                 "type": "png"
             },
             {
-                "file": "images/Sunrise.png",
-                "name": "SUNRISE_IMAGE",
+                "file": "images/Toothbrush.png",
+                "name": "brush_teeth_image",
+                "type": "png"
+            },
+            {
+                "file": "images/Breakfast.png",
+                "name": "breakfast_image",
                 "type": "png"
             }
         ]
