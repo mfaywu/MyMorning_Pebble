@@ -1,0 +1,19 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "wu.mfay@gmail.com",
+    "longName": "MyMorning",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "shortName": "MyMorning",
+    "uuid": "4a83534c-6889-4155-b7eb-b57edbb116d0",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
