@@ -7,22 +7,42 @@ static BitmapLayer *task_img;
 static BitmapLayer *forward;
 static BitmapLayer *backward;
 static TextLayer *task_name;
-int counter = 1; 
+int counter; 
 int maxRoutines;
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
   //reset the layer and add another one
   if (counter == 1) {
-    text_layer_set_text(task_name, "first screen");
+    text_layer_set_text(task_name, "Brush teeth");
     //bitmap_layer_set_bitmap(play_pause_img, s_res_play_image);
     counter++;
   }
   else if (counter == 2) {
-    text_layer_set_text(task_name, "second screen");
+    text_layer_set_text(task_name, "Get dressed");
     counter++;
   }
   else if (counter == 3) {
-    text_layer_set_text(task_name, "third screen");
+    text_layer_set_text(task_name, "Meditate");
+    counter++;
+  }
+  else if (counter == 4) {
+    text_layer_set_text(task_name, "Eat b'fast");
+    counter++;
+  }
+  else if (counter == 5) {
+    text_layer_set_text(task_name, "Pack b'pack");
+    counter++;
+  }
+  else if (counter == 6) {
+    text_layer_set_text(task_name, "Get more h2o");
+    counter++;
+  }
+  else if (counter == 7) {
+    text_layer_set_text(task_name, "Get keys");
+    counter++;
+  }
+  else if (counter == 8) {
+    text_layer_set_text(task_name, "Turn off lights");
     counter++;
   }
   else if (counter == maxRoutines) 
@@ -65,7 +85,7 @@ static void initialise_ui(void) {
   
   // task_name
   task_name = text_layer_create(GRect(17, 18, 78, 20));
-  text_layer_set_text(task_name, "first screen");
+  text_layer_set_text(task_name, "ello");
   text_layer_set_text_alignment(task_name, GTextAlignmentCenter);
   layer_add_child(window_get_root_layer(s_window), (Layer *)task_name);
 }
@@ -92,8 +112,8 @@ void show_task(void) {
   window_stack_push(s_window, true);
   
   //Initializing routine variables 
-  //counter = 1; 
-  maxRoutines = 4;
+  counter = 1; 
+  maxRoutines = 9;
 }
 
 void hide_task(void) {
