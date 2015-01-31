@@ -6,18 +6,10 @@
 static Window *s_window;
 static GBitmap *s_res_play_icon;
 static GFont s_res_gothic_28_bold;
+static GBitmap *s_res_sunrise_image;
 static BitmapLayer *sunrise;
 static BitmapLayer *start_button;
 static TextLayer *start_text;
-
-void select_click_handler(ClickRecognizerRef recognizer, void *context) {
-  printf("Pushed button");
-  show_task();
-}
-
-void click_config_provider(Window *s_window) {
-  window_single_click_subscribe(BUTTON_ID_SELECT, select_click_handler);
-}
 
 static void initialise_ui(void) {
   s_window = window_create();
@@ -26,8 +18,10 @@ static void initialise_ui(void) {
   
   s_res_play_icon = gbitmap_create_with_resource(RESOURCE_ID_play_icon);
   s_res_gothic_28_bold = fonts_get_system_font(FONT_KEY_GOTHIC_28_BOLD);
+  s_res_sunrise_image = gbitmap_create_with_resource(RESOURCE_ID_SUNRISE_IMAGE);
   // sunrise
   sunrise = bitmap_layer_create(GRect(0, 85, 145, 67));
+  bitmap_layer_set_bitmap(sunrise, s_res_sunrise_image);
   bitmap_layer_set_background_color(sunrise, GColorWhite);
   layer_add_child(window_get_root_layer(s_window), (Layer *)sunrise);
   
@@ -51,6 +45,7 @@ static void destroy_ui(void) {
   bitmap_layer_destroy(start_button);
   text_layer_destroy(start_text);
   gbitmap_destroy(s_res_play_icon);
+  gbitmap_destroy(s_res_sunrise_image);
 }
 // END AUTO-GENERATED UI CODE
 
